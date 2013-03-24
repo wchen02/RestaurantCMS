@@ -1,0 +1,1 @@
+Starter project for Express, AngularJS, CoffeeScript, LESS, JADE, TwitterBootstrap, Mongoose
