@@ -1,5 +1,5 @@
 express = require 'express'
-routes = require './routes'
+routes = require './config/routes'
 http = require 'http'
 path = require 'path'
 mongoose = require 'mongoose'
@@ -28,7 +28,7 @@ app.configure "development", ->
   db = mongoose.connect 'mongodb://' + config.db.user + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
 
 # Routes
-app.get '/', routes.index
+routes.initRoutes(app)
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Express server listening on port ' + app.get('port')
