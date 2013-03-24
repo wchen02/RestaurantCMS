@@ -1,5 +1,5 @@
 {
-  "name": "Starter Project",
+  "name": "RestaurantCMS",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,7 @@
     "jade": "*",
     "less-middleware": "*",
     "coffee-script": "1.6.1",
-    "mongoose": "3.6.0"
+    "mongoose": "3.6.0",
+    "config": "0.4.21"
   }
 }

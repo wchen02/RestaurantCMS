@@ -1,5 +1,7 @@
 node_modules
 .idea
+*.html
 *.js
 !public/js/
 !public/js/*.js
+config/runtime.json

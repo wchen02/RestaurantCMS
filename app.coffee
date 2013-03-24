@@ -3,6 +3,7 @@ routes = require './routes'
 http = require 'http'
 path = require 'path'
 mongoose = require 'mongoose'
+config = require 'config'
 
 db = null
 app = express()
@@ -15,7 +16,7 @@ app.configure ->
   app.use express.logger('dev')
   app.use express.bodyParser()
   app.use express.methodOverride()
-  app.use require('less-middleware')(src: __dirname + '/public')
+  # jslint highlights express.static as error
   app.use express['static'](path.join(__dirname, 'public'))
   app.use app.router
 
@@ -24,7 +25,7 @@ app.configure "development", ->
     dumpExceptions: true
     showStack: true
   )
-  db = mongoose.connect 'mongodb://devroot:password@localhost:27017/restaurant'
+  db = mongoose.connect 'mongodb://' + config.db.user + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
 
 # Routes
 app.get '/', routes.index
