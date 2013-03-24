@@ -24,7 +24,7 @@ app.configure "development", ->
     dumpExceptions: true
     showStack: true
   )
-  db = mongoose.connect 'mongodb://user:password@host:port/dbname'
+  db = mongoose.connect 'mongodb://devroot:password@localhost:27017/restaurant'
 
 # Routes
 app.get '/', routes.index
