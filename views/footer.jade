@@ -1,8 +1,14 @@
+- items = [{link:'home',name:'Home'},{link:'menu',name:'Menu'},{link:'locations',name:'Locations'},{link:'faq',name:'FAQ'},{link:'about',name:'About'},{link:'terms',name:'Terms & Conditions'},{link:'privacy',name:'Privacy Policy'}]
+
+mixin navItems(items)
+    - each item in items
+        li: a(href='\##{item.link}') #{item.name}
+
 footer
     .container.text-center
+        #footer-nav
+            ul.clearfix
+                mixin navItems(items)
         p &copy; Copyright 2013 - Present, Wensheng Chen, All Rights Reserved.
         p This website is still under development.
         p Restaurant Name &bull; Times Square, New York, NY, 10018 &bull; Tel: 212-123-1234
-        a(href='#terms') Terms & Conditions
-        &nbsp;|&nbsp;
-        a(href='#privacy') Privacy Policy
