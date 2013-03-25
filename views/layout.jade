@@ -1,21 +1,27 @@
 doctype 5
 html(ng-app)
-  head
-    title= title
-    meta(charset='utf-8')
+    head
+        title=title
+        meta(charset='utf-8')
 
-    // Mobile Specific
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        // Mobile Specific
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-    // JS
-    script(src='/js/jquery.min.js')
-    script(src='/js/angular.min.js')
-    script(src='/js/bootstrap.min.js')
+        // JS
+        script(src='/js/jquery.min.js')
+        script(src='/js/angular.min.js')
+        script(src='/js/bootstrap.min.js')
+        block script
 
-    // CSS
-    link(rel='stylesheet', href='/css/bootstrap.css')
-    link(rel='stylesheet', href='/css/bootstrap-responsive.css')
-    link(rel='stylesheet', href='/css/style.css')
+        // CSS
+        link(rel='stylesheet', href='/css/bootstrap.css')
+        link(rel='stylesheet', href='/css/bootstrap-responsive.css')
+        link(rel='stylesheet', href='/css/style.css')
+        block stylesheet
 
-  body
+    body
+    block header
+        include header.jade
     block content
+    block footer
+        include footer.jade

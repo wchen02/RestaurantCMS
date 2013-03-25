@@ -1,0 +1,20 @@
+- items = [{link:'home',name:'Home'},{link:'menu',name:'Menu'},{link:'reviews',name:'Reviews'},{link:'photos',name:'Photos'},{link:'contact',name:'Contact'},{link:'about',name:'About'}]
+
+mixin navItems(items)
+    - each item in items
+        li: a(href='\##{item.link}') #{item.name}
+
+block header
+    .navbar.navbar-static-top.navbar-inverse
+        .navbar-inner
+            .container
+                button.btn.btn-navbar.collapsed(type='button', data-toggle='collapse', data-target='.nav-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.brand(href='/') Restaurant CMS
+                .nav-collapse.collapse
+                    ul.nav
+                        mixin navItems(items)
+                    form.navbar-search.pull-right
+                        input.search-query(type='text', placeholder='Search')
