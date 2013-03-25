@@ -1,7 +1,12 @@
 node_modules
+config/runtime.json
 .idea
 *.html
+*.css
 *.js
 !public/js/
 !public/js/*.js
-config/runtime.json
+!public/css/bootstrap.css
+!public/css/bootstrap.min.css
+!public/css/bootstrap-responsive.css
+!public/css/bootstrap-responsive.min.css
