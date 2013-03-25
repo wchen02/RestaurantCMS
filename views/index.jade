@@ -2,8 +2,33 @@ extends layout
 
 block content
     .container
-        h1= title
-        h2 Node.js
+    #myCarousel.carousel.slide
+        ol.carousel-indicators
+            li.active(data-target='#myCarousel', data-slide-to='0')
+            li(data-target='#myCarousel', data-slide-to='1')
+            li(data-target='#myCarousel', data-slide-to='2')
+
+        .carousel-inner
+            .active.item
+                a.thumbnail(href='#')
+                    img(data-src='js/holder.js/2000x600', alt='')
+                .container
+                    .carousel-caption
+                        h1 Image Headline
+                        p.lead Caption message here
+                        br
+                        a.btn.btn-large.btn-primary(href='#') Press Button Now!
+            .item
+                a.thumbnail(href='#')
+                    img(data-src='js/holder.js/1500x600', alt='')
+            .item
+                a.thumbnail(href='#')
+                    img(data-src='js/holder.js/1000x600', alt='')
+
+        a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;
+        a.carousel-control.right(href='#myCarousel', data-slide='next') &rsaquo;
+
+    h2 Node.js
         hr
         p Node.js is a server-side software system designed for writing scalable Internet applications, notably web servers.[1] Programs are written on the server side in JavaScript, using event-driven, asynchronous I/O to minimize overhead and maximize scalability.[2]
         h2 Details

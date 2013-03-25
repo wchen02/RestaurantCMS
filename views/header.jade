@@ -2,6 +2,7 @@
 
 mixin navItems(items)
     - each item in items
+        li.divider-vertical
         li: a(href='\##{item.link}') #{item.name}
 
 block header
