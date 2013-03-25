@@ -22,9 +22,9 @@ app.configure ->
 
 app.configure "development", ->
   app.use express.errorHandler(
-    dumpExceptions: true
-    showStack: true
-  )
+                                dumpExceptions: true
+                                showStack: true
+                              )
   db = mongoose.connect 'mongodb://' + config.db.user + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
 
 # Routes
