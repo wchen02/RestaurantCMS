@@ -1,7 +1,7 @@
 doctype 5
-html(ng-app)
+html(lang='en', ng-app='restaurantCms')
     head
-        title=title
+        //title=title
         meta(charset='utf-8')
 
         // Mobile Specific
@@ -10,6 +10,8 @@ html(ng-app)
         // JS
         script(src='/js/jquery.min.js')
         script(src='/js/angular.min.js')
+        script(src='/js/app.js')
+        script(src='/js/controllers.js')
         script(src='/js/bootstrap.min.js')
         script(src='/js/holder.js')
         block script
@@ -21,8 +23,12 @@ html(ng-app)
         block stylesheet
 
     body
-    block header
-        include header.jade
-    block content
-    block footer
-        include footer.jade
+    #header
+        block header
+            include header.jade
+    #content(ng-view)
+        block content
+
+    #footer
+        block footer
+            include footer.jade
