@@ -1,0 +1,48 @@
+#menu {
+  .menu_section {
+    color: @red;
+    margin-bottom: 15px;
+    margin-right: 15px;
+    margin-left: 15px;
+    float: left;
+    width: 650px;
+
+    .section_name {
+      margin-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+
+    }
+
+    .menu_item {
+      width: 300px;
+
+      color: @black;
+      border-top: 1px dotted @green;
+      padding: 5px;
+
+      .item_name {
+
+      }
+
+      .item_price {
+        float: right;
+      }
+    }
+
+    // list is 0 index based, first item is even
+    .menu_item:nth-child(odd) {
+      float: right;
+    }
+
+    .menu_item:nth-child(even) {
+      float: left;
+    }
+
+    // colors odd row menu items
+    .menu_item[data-odd=true] {
+      background-color: lighten(blue, 48%);
+    }
+
+  }
+}

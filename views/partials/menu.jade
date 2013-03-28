@@ -1,3 +1,11 @@
-.container
-    h2 Menu view
-    p This is the menu!
+.container#menu(ng-controller="MenuCtrl")
+    //- loops through all sections
+    .menu_section(ng-repeat="section in data.menu")
+        .section_name {{section.section_name}}
+
+        //- loops through all items in the sections and add determine if tow is odd
+        .menu_item(ng-repeat="item in section.items", data-odd="{{isOddRow()}}")
+            span.item_name {{item.name}}
+            span.item_price {{item.price}}
+        //- resets the counter
+        {{resetCounter()}}
