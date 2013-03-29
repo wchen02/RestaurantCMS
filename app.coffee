@@ -4,7 +4,6 @@ http = require 'http'
 path = require 'path'
 mongoose = require 'mongoose'
 config = require 'config'
-Restaurant = require('./models/RestaurantModel').Restaurant
 
 db = null
 app = express()
@@ -22,17 +21,13 @@ app.configure ->
   app.use app.router
 
 app.configure "development", ->
-  app.use express.errorHandler(
-                                dumpExceptions: true
-                                showStack: true
-                              )
-  dbString = 'mongodb://' + config.db.user + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
-  console.log 'Connecting to: ' + dbString
-  db = mongoose.connect dbString
+  app.use express.errorHandler()
+  console.log 'Connecting to MongoDB: ' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
+  db = mongoose.connect 'mongodb://' + config.db.user + ':' + config.db.password + '@' + config.db.host + ':' + config.db.port + '/' + config.db.dbname
   connection = mongoose.connection
   connection.on 'error', console.error.bind(console, 'connection error:')
   connection.once 'open', () ->
-    console.log('Connection to MongoDb has successfully been established.')
+    console.log 'Connection to MongoDb has successfully been established.'
 
     return
 
