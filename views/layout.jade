@@ -1,28 +1,31 @@
 doctype 5
 html(lang='en', ng-app='restaurantCms')
     head
-        //title=title
-        title Welcome to Restaurant CMS
+        - if (typeof(title) !== 'undefined') {
+            title=title
+        - } else {
+            title Welcome to Restaurant CMS
+        - }
         meta(charset='utf-8')
 
         // Mobile Specific
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
         // JS
-        script(src='/js/jquery.min.js')
-        script(src='/js/angular.min.js')
-        script(src='/js/angularjs/app.js')
-        script(src='/js/angularjs/controllers.js')
-        script(src='/js/angularjs/menu.js')
-        script(src='/js/bootstrap.min.js')
-        script(src='/js/holder.js')
         block script
+            script(src='/js/jquery.min.js')
+            script(src='/js/angular.min.js')
+            script(src='/js/angularjs/app.js')
+            script(src='/js/angularjs/controllers.js')
+            script(src='/js/angularjs/menu.js')
+            script(src='/js/bootstrap.min.js')
+            script(src='/js/holder.js')
 
         // CSS
-        link(rel='stylesheet', href='/css/bootstrap.css')
-        link(rel='stylesheet', href='/css/bootstrap-responsive.css')
-        link(rel='stylesheet', href='/css/style.css')
         block stylesheet
+            link(rel='stylesheet', href='/css/bootstrap.css')
+            link(rel='stylesheet', href='/css/bootstrap-responsive.css')
+            link(rel='stylesheet', href='/css/style.css')
 
     body
     #header
