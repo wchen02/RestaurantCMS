@@ -28,12 +28,12 @@ html(lang='en', ng-app='restaurantCms')
             link(rel='stylesheet', href='/css/style.css')
 
     body
-    #header
-        block header
-            include header.jade
-    #content(ng-view)
-        block content
+        #header
+            block header
+                include header.jade
+        #content(ng-view)
+            block content
 
-    #footer
-        block footer
-            include footer.jade
+        #footer
+            block footer
+                include footer.jade
