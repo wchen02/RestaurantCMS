@@ -7,7 +7,7 @@ JADE := jade
 COMPRESS := uglifyjs -o
 
 HTML_FILES = $(shell find .. -wholename '../views/*.html')
-JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../node_modules/*')
+JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/js/[a-zA-Z0-9-_]*.js' ! -wholename '../node_modules/*')
 COMPRESSJS_FILES = $(shell find .. -wholename '../public/js/angularjs/*.js')
 LESS_FILES = $(shell find .. -wholename '../public/css/*.less')
 
