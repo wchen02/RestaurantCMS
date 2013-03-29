@@ -1,6 +1,9 @@
 mongoose = require 'mongoose'
 
 RestaurantSchema = mongoose.Schema
+  _id:
+    type: mongoose.Schema.Types.ObjectId
+    select: false
   name:
     type: String
     required: true
