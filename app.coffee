@@ -1,9 +1,10 @@
 express = require 'express'
-routes = require './config/routes'
 http = require 'http'
 path = require 'path'
 mongoose = require 'mongoose'
 config = require 'config'
+routes = require './config/routes'
+models = require './config/models'
 
 db = null
 app = express()
@@ -34,6 +35,7 @@ app.configure "development", ->
 
 # Routes
 routes.initRoutes(app)
+models.initModels()
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Express server listening on port ' + app.get('port')

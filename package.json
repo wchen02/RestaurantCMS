@@ -1,16 +1,40 @@
 {
-    "name": "RestaurantCMS",
-    "version": "0.0.1",
-    "private": true,
-    "scripts": {
-        "start": "node app"
-    },
-    "dependencies": {
-        "express": "3.1.0",
-        "jade": "*",
-        "less-middleware": "*",
-        "coffee-script": "1.6.1",
-        "mongoose": "3.6.0",
-        "config": "0.4.21"
-    }
+  "name": "RestaurantCMS",
+  "version": "0.0.0",
+  "description": "Just a project I do to learn technologies",
+  "main": "app.coffee",
+  "dependencies": {
+    "config": "~0.4.21",
+    "express": "~3.1.0",
+    "jade": "~0.28.2",
+    "less-middleware": "~0.1.9",
+    "mongoose": "~3.6.0",
+    "vows": "~0.7.0",
+    "underscore": "~1.4.4"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/icydragoon/RestaurantCMS.git"
+  },
+  "keywords": [
+    "Express",
+    "AngularJS",
+    "CoffeeScript",
+    "LESS",
+    "JADE",
+    "TwitterBootstrap",
+    "Mongoose",
+    "Underscore"
+  ],
+  "author": "Wensheng Chen",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "gitHead": "e43265960bfb1bfe3ea8f7a4180a2049398fa983",
+  "private": true
 }
