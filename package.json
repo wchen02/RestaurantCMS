@@ -10,7 +10,8 @@
     "less-middleware": "~0.1.9",
     "mongoose": "~3.6.0",
     "vows": "~0.7.0",
-    "underscore": "~1.4.4"
+    "underscore": "~1.4.4",
+    "bulk-loader": "0.0.4"
   },
   "devDependencies": {
     "coffee-script": "~1.6.1"
@@ -35,6 +36,5 @@
   "author": "Wensheng Chen",
   "license": "BSD",
   "readmeFilename": "README.md",
-  "gitHead": "e43265960bfb1bfe3ea8f7a4180a2049398fa983",
   "private": true
 }

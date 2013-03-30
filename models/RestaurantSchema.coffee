@@ -11,14 +11,20 @@ RestaurantSchema = mongoose.Schema
   address:
     type: String
     required: true
+  city:
+    type: String
+    required: true
+  state:
+    type: String
+    required: true
+  zip:
+    type: Number
+    required: true
   telephone:
     type: String
     required: true
     index:
       unique: true
-  restauran:
-    type: String
-    required: true
   minimum_order:
     type: Number
     'default': 0
@@ -34,9 +40,11 @@ RestaurantSchema = mongoose.Schema
       required: true
   ]
   menu: [
-    section:
+    name:
       type: String
       required: true
+    description:
+      type: String
     items: [
       name:
         type: String
@@ -44,6 +52,8 @@ RestaurantSchema = mongoose.Schema
       price:
         type: Number
         required: true
+      description:
+        type: String
     ]
   ]
 

@@ -4,7 +4,7 @@ path = require 'path'
 mongoose = require 'mongoose'
 config = require 'config'
 routes = require './config/routes'
-models = require './config/models'
+bulkloader = require 'bulk-loader'
 
 db = null
 app = express()
@@ -35,7 +35,14 @@ app.configure "development", ->
 
 # Routes
 routes.initRoutes(app)
-models.initModels()
+#models.initModels()
+bulkloader.load('./models/', /Model.coffee/, (err, file, filename) ->
+  if err
+    console.log 'Error ' + filename
+  else
+    console.log 'Loaded ' + filename
+  return
+)
 
 http.createServer(app).listen app.get('port'), ->
   console.log 'Express server listening on port ' + app.get('port')
