@@ -7,8 +7,8 @@ JADE := jade
 COMPRESS := uglifyjs -o
 
 HTML_FILES = $(shell find .. -wholename '../views/*.html')
-JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/js/[a-zA-Z0-9-_]*.js' ! -wholename '../node_modules/*')
-COMPRESSJS_FILES = $(shell find .. -wholename '../public/js/angularjs/*.js')
+JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/*' ! -wholename '../node_modules/*')
+COMPRESSJS_FILES = $(shell find .. -wholename '../angularjs/*.js')
 LESS_FILES = $(shell find .. -wholename '../public/css/*.less')
 
 # Marco: gets files from LESS_FILES, replace .less with .css and run %.css: %.less target
@@ -50,7 +50,7 @@ less: $(CSS_FILES)
 
 # Concatenates js files into one huge minified js
 compressjs:
-	cat $(COMPRESSJS_FILES) | $(COMPRESS) ../public/js/angularjs/app.min.js
+	cat $(COMPRESSJS_FILES) | $(COMPRESS) ../angularjs/app.min.js
 
 # $< = source, $@ = target
 %.css: %.less
