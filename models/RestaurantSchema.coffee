@@ -20,11 +20,12 @@ RestaurantSchema = mongoose.Schema
   zip:
     type: Number
     required: true
-  telephone:
+  telephone: [
     type: String
     required: true
     index:
       unique: true
+  ]
   minimum_order:
     type: Number
     'default': 0

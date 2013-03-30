@@ -13,7 +13,10 @@ window.MenuCtrl = ($scope, $routeParams, $http) ->
 #    city: 'Charlotte'
 #    state: 'NC'
 #    zip: 28227
-#    telephone: "(704) 531-3338"
+#    telephone: [
+#      "(704) 531-3338",
+#      "(704) 260-0088"
+#    ]
 #    menu: [
 #      name: "Appetizers"
 #      description: "Include: egg roll, crispy chicken wings, crab rangoon, fantail shrimp, cho cho chicken, fried wonton"
