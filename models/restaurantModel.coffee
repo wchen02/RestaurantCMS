@@ -1,7 +1,7 @@
 mongoose = require 'mongoose'
-RestaurantSchema = require('./RestaurantSchema').RestaurantSchema
+RestaurantSchema = require('./restaurantSchema').RestaurantSchema
 
-RestaurantSchema.methods.getMenu = () ->
+RestaurantSchema.methods.getMenu = ->
   console.log 'Getting menu'
   @menu
 
