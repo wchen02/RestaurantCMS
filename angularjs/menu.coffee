@@ -1,8 +1,9 @@
 window.MenuCtrl = ($scope, $routeParams, $http) ->
   counter = -1
   console.log 'menu controller'
+  accessToken = 'ZeeAccessToken'
 
-  $http.get('/api/menu').success (data) ->
+  $http.get('/api/menu?' + accessToken).success (data) ->
     $scope.data = data[0]
     return
 
