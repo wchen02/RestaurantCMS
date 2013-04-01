@@ -11,22 +11,15 @@ html(lang='en', ng-app='restaurantCms')
         // Mobile Specific
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
 
-        // JS
-        block script
-            script(src='/js/jquery.min.js')
-            script(src='/js/angular.min.js')
-            //script(src='/js/angularjs/app.min.js')
-            script(src='/js/angularjs/app.js')
-            script(src='/js/angularjs/controllers.js')
-            script(src='/js/angularjs/menu.js')
-            script(src='/js/bootstrap.min.js')
-            script(src='/js/holder.js')
-
         // CSS
         block stylesheet
             link(rel='stylesheet', href='/css/bootstrap.css')
             link(rel='stylesheet', href='/css/bootstrap-responsive.css')
             link(rel='stylesheet', href='/css/style.css')
+
+        // JS
+        block headscript
+            script(src='/js/lib/holder.js')
 
     body
         #header
@@ -38,3 +31,13 @@ html(lang='en', ng-app='restaurantCms')
         #footer
             block footer
                 include footer.jade
+
+        block footerscript
+            script(src='/js/lib/jquery.min.js')
+            script(src='/js/lib/angular.js')
+            script(src='/js/lib/bootstrap.min.js')
+
+            script(src='/js/angularjs/app.js')
+            script(src='/js/angularjs/controllers.js')
+            script(src='/js/angularjs/menu.js')
+

@@ -17,7 +17,7 @@ exports.init = (app, options...) ->
         lastname: 'Chen'
 
       return done null, user
-    return done 'You are not allowed to see this page', null
+    return done 'You are not allowed to see this page', false
   )
 
   return

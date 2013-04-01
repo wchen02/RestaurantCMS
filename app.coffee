@@ -15,7 +15,7 @@ app.configure ->
   app.use express.favicon()
   app.use express.logger('dev')
   app.use express.cookieParser()
-  app.use express.session({secret: 'zee grumpy cat!', sid: 123})
+  app.use express.session({secret: 'zee grumpy cat!'})
   app.use express.bodyParser()
   app.use express.methodOverride()
   # jslint highlights express.static as error

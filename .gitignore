@@ -6,6 +6,7 @@ config/runtime.json
 *.js
 !public/js/
 !public/js/*.js
+!public/js/lib/*.js
 !public/css/bootstrap.css
 !public/css/bootstrap.min.css
 !public/css/bootstrap-responsive.css
