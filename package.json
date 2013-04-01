@@ -16,8 +16,9 @@
     "passport-http-bearer": "~0.2.1"
   },
   "devDependencies": {
-    "coffee-script": "~1.6.1"
-  },
+    "coffee-script": "~1.6.1",
+    "karma": "~0.8.1"
+},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
