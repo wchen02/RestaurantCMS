@@ -3,7 +3,7 @@
 mixin navItems(items)
     - each item in items
         li.divider-vertical
-        li: a(href='\##{item.link}') #{item.name}
+        li: a(href='#{item.link}') #{item.name}
 
 block header
     .navbar.navbar-static-top.navbar-inverse

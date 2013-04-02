@@ -7,4 +7,4 @@ exports.init = (app, options...) ->
   app.get '/', home.index
   app.get '/partials/:name', home.partials
   app.get '/api/menu', passport.authenticate('bearer', {session: false}), menu.get
-  app.all '*', error.notFound
+  app.all '*', home.index
