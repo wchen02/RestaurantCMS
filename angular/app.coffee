@@ -10,5 +10,8 @@ angular.module("restaurantCms", ['myServices']).config ["$routeProvider", ($rout
   ).when("/",
     templateUrl: "partials/home"
     controller: HomeCtrl
+  ).when("/locations",
+    templateUrl: "partials/locations"
+    controller: LocationsCtrl
   ).otherwise redirectTo: "/"
 ]
