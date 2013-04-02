@@ -6,6 +6,6 @@
         //- loops through all items in the sections and add determine if tow is odd
         .menu_item(ng-repeat="item in category.items", data-odd="{{isOddRow()}}")
             span.item_name {{item.name}}
-            span.item_price {{formatCurrency(item.price, '$')}}
+            span.item_price {{item.price | currency}}
         //- resets the counter
         {{resetCounter()}}

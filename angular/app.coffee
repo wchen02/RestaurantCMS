@@ -1,6 +1,6 @@
 "use strict"
 
-angular.module("restaurantCms", []).config ["$routeProvider", ($routeProvider) ->
+angular.module("restaurantCms", ['myServices']).config ["$routeProvider", ($routeProvider) ->
   $routeProvider.when("/menu",
     templateUrl: "partials/menu"
     controller: MenuCtrl
