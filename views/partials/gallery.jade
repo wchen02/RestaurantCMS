@@ -3,5 +3,6 @@
     .gallery.thumbnails
         .row-fluid(ng-repeat="row in pictureRows")
             .span3.thumbnail(ng-repeat="pic in row")
-                img(src="{{pic.src}}", data-caption="{{pic.caption}}", data-description="{{pic.description}}")
+                a(href="#")
+                    img(src="{{pic.src}}", data-caption="{{pic.caption}}", data-description="{{pic.description}}")
             .span12

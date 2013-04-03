@@ -17,6 +17,7 @@ window.GalleryCtrl = ($scope, $routeParams, Picture) ->
     $(document).ready ->
       setTimeout( (->
         Holder.run()
+        $(".thumbnail a img").fancybox()
         return
       ), 500)
       return
