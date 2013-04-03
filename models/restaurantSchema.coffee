@@ -58,4 +58,4 @@ RestaurantSchema = mongoose.Schema
     ]
   ]
 
-exports.RestaurantSchema = RestaurantSchema
+exports.Schema = RestaurantSchema

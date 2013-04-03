@@ -1,4 +1,4 @@
 mongoose = require 'mongoose'
-PictureSchema = require('./pictureSchema').PictureSchema
+PictureSchema = require('./pictureSchema').Schema
 
-exports.Picture = mongoose.model 'Picture', PictureSchema
+exports.Model = mongoose.model 'Picture', PictureSchema

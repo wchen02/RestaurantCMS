@@ -13,4 +13,4 @@ PictureSchema = mongoose.Schema
   description:
     type: String
 
-exports.PictureSchema = PictureSchema
+exports.Schema = PictureSchema
