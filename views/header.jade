@@ -1,12 +1,5 @@
-- items = [{link:'home',name:'Home'},{link:'menu',name:'Menu'},{link:'locations',name:'Locations'},{link:'reviews',name:'Reviews'},{link:'gallery',name:'Gallery'},{link:'about',name:'About'}]
-
-mixin navItems(items)
-    - each item in items
-        li.divider-vertical
-        li: a(href='#{item.link}') #{item.name}
-
 block header
-    .navbar.navbar-static-top.navbar-inverse
+    .navbar.navbar-fixed-top.navbar-inverse
         .navbar-inner
             .container
                 button.btn.btn-navbar.collapsed(type='button', data-toggle='collapse', data-target='.nav-collapse')
@@ -16,6 +9,36 @@ block header
                 a.brand(href='/') Restaurant CMS
                 .nav-collapse.collapse
                     ul.nav
-                        mixin navItems(items)
+                        li.divider-vertical
+                        li
+                            a(href='#menu')
+                                i.icon-home.icon-white
+                                | Home
+                        li.divider-vertical
+                        li
+                            a(href='#menu')
+                                i.icon-list-alt.icon-white
+                                | Menu
+                        li.divider-vertical
+                        li
+                            a(href='#locations')
+                                i.icon-globe.icon-white
+                                | Locations
+                        li.divider-vertical
+                        li
+                            a(href='#reviews')
+                                i.icon-comment.icon-white
+                                | Reviews
+                        li.divider-vertical
+                        li
+                            a(href='#gallery')
+                                i.icon-picture.icon-white
+                                | Gallery
+                        li.divider-vertical
+                        li
+                            a(href='#about')
+                                i.icon-info-sign.icon-white
+                                | About
+                        li.divider-vertical
                     form.navbar-search.pull-right
                         input.search-query(type='text', placeholder='Search')
