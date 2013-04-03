@@ -3,5 +3,5 @@
     .gallery.thumbnails
         .row-fluid(ng-repeat="row in pictureRows")
             .span3.thumbnail(ng-repeat="pic in row")
-                img(data-src="/js/lib/holder.js/300x200")
+                img(data-src="/js/lib/holder.js/300x200", data-caption="{{pic.caption}}", data-description="{{pic.description}}")
             .span12
