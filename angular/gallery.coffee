@@ -1,4 +1,5 @@
 window.GalleryCtrl = ($scope, $routeParams, Picture) ->
+  target = null
   Picture.query (pictures) ->
     totalPics = pictures.length
     pictureRows = []
@@ -17,7 +18,16 @@ window.GalleryCtrl = ($scope, $routeParams, Picture) ->
     $(document).ready ->
       setTimeout( (->
         Holder.run()
-        $(".thumbnail a img").fancybox()
+        $(".thumbnail a img").fancybox(
+          beforeShow: () ->
+            target = $(@element[0])
+            return
+
+          afterClose: () ->
+            $(target).show()
+            return
+        )
+
         return
       ), 500)
       return
