@@ -2,13 +2,13 @@
 @import-once "header.less";
 @import-once "footer.less";
 @import-once "menu.less";
+@import-once "home.less";
 
 body {
   color: @textColor;
   background-color: @bodyBackground;
   font-family: @baseFontFamily;
   font-size: @baseFontSize;
-//  margin-top: 41px;
 }
 
 a {
@@ -17,4 +17,9 @@ a {
   :hover {
     color: @linkColorHover;
   }
+}
+
+#content {
+  min-height: 600px;
+  margin-top: 30px;
 }
