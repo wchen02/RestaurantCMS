@@ -1,8 +1,8 @@
 mongoose = require 'mongoose'
 
 exports.get = (req, res) ->
-  Picture = mongoose.model('Picture')
-  Picture.find().populate('Picture', '-_id')
+  Pictures = mongoose.model('Pictures')
+  Pictures.find().populate('Pictures', '-_id')
   .exec (err, pictures) ->
     if err
       console.log 'Got no pictures'

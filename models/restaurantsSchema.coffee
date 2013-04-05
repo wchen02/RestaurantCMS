@@ -1,6 +1,6 @@
 mongoose = require 'mongoose'
 
-RestaurantSchema = mongoose.Schema
+RestaurantsSchema = mongoose.Schema
   _id:
     type: mongoose.Schema.Types.ObjectId
     select: false
@@ -58,4 +58,4 @@ RestaurantSchema = mongoose.Schema
     ]
   ]
 
-exports.Schema = RestaurantSchema
+exports.Schema = RestaurantsSchema
