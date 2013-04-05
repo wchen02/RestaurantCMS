@@ -16,7 +16,9 @@
     "karma": "~0.8.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/coffee app.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "scripts/make"
   },
   "repository": {
     "type": "git",
