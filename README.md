@@ -10,6 +10,10 @@ Install Mongo database
 ```bash
 $ sudo apt-get install mongodb
 ```
+Install all the dependencies
+```bash
+npm install
+```
 Change db setting if you wish, you would also need to reflect the same changes to config/default.coffee
 ```bash
 $ cd scripts/config
