@@ -11,9 +11,7 @@
     "mongoose": "~3.6.0",
     "bulk-loader": "0.0.4",
     "passport": "~0.1.16",
-    "passport-http-bearer": "~0.2.1"
-  },
-  "devDependencies": {
+    "passport-http-bearer": "~0.2.1",
     "coffee-script": "~1.6.1",
     "karma": "~0.8.1"
   },

@@ -6,4 +6,4 @@ echo ""
 echo "Starting Karma Server (https://github.com/karma-runner/karma)"
 echo "-------------------------------------------------------------------"
 
-karma start $BASE_DIR/../config/karma-e2e.conf.coffee $*
+../node_modules/.bin/karma start $BASE_DIR/../config/karma-e2e.conf.coffee $*
