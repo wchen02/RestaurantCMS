@@ -1,13 +1,14 @@
-.container#menu
-    br
-    br
-    //- loops through all sections
-    .categories(ng-repeat="category in data.menu")
-        .category {{category.name}}
+.container
+    #menu
+        br
+        br
+        //- loops through all sections
+        .categories(ng-repeat="category in data.menu")
+            .category {{category.name}}
 
-        //- loops through all items in the sections and add determine if tow is odd
-        .menu_item(ng-repeat="item in category.items", data-odd="{{isOddRow()}}")
-            span.item_name {{item.name}}
-            span.item_price {{item.price | currency}}
-        //- resets the counter
-        {{resetCounter()}}
+            //- loops through all items in the sections and add determine if tow is odd
+            .menu_item(ng-repeat="item in category.items", data-odd="{{isOddRow()}}")
+                span.item_name {{item.name}}
+                span.item_price {{item.price | currency}}
+            //- resets the counter
+            {{resetCounter()}}
