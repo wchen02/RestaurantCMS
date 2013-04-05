@@ -26,6 +26,7 @@ clean:
 	@printf '\n'
 # Might not want to delete this file if we need to pass jade functionality to client-side
 	@rm -fv ../config/runtime.json
+	@rm -fv config/runtime.json
 
 build:	coffee jade less
 

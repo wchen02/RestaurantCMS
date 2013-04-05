@@ -1,3 +1,4 @@
+#!/usr/bin/env node_modules/.bin/coffee
 express = require 'express'
 http = require 'http'
 path = require 'path'
