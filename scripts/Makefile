@@ -1,13 +1,13 @@
 # Executable files
-LESSC := lessc
-COFFEE := coffee
-JADE := jade
+LESSC := ../node_modules/less-middleware/node_modules/.bin/lessc
+COFFEE := ../node_modules/.bin/coffee
+JADE := ../node_modules/.bin/jade
 
 # Compress executable + expect output dir
 COMPRESS := uglifyjs -o
 
 HTML_FILES = $(shell find .. -wholename '../views/*.html')
-JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/*' ! -wholename '../node_modules/*')
+JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/*' ! -wholename '../node_modules/*' ! -wholename '../test/lib/angular/*')
 COMPRESSJS_FILES = $(shell find .. -wholename '../angularjs/*.js')
 LESS_FILES = $(shell find .. -wholename '../public/css/*.less')
 

@@ -5,6 +5,7 @@ scripts/config/runtime.json
 *.html
 *.css
 *.js
+!test/lib/angular/*.js
 !public/js/
 !public/js/*.js
 !public/js/lib/*.js
