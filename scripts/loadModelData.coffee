@@ -1,5 +1,8 @@
-usuage = "node loadModelData.js <modelName> <dataFilename.js>"
-#coffee loadModelData.coffee <modelName> <dataFilename.coffee>
+#!/usr/bin/env ../node_modules/.bin/coffee
+
+usuage = "node loadModelData <modelName> [dataFilename]"
+# ./loadModelData.coffee <modelName> [dataFilename]
+# coffee loadModelData.coffee <modelName> [dataFilename]
 
 try
   console.log("Script start time: " + new Date)
@@ -9,8 +12,8 @@ try
 
   Model = {}
   modelName = process.argv[2]
-  dataFilename = process.argv[3]
-
+  dataFilename = (process.argv[3]) ? "./data/#{modelName}"
+  console.log(dataFilename)
   test = (message) ->
     console.log(message)
     return
