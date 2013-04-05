@@ -1,5 +1,6 @@
 node_modules
 config/runtime.json
+scripts/config/runtime.json
 .idea
 *.html
 *.css
