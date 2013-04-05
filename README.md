@@ -1,9 +1,11 @@
 # Restaurant CMS
-Starter project for Express, AngularJS, CoffeeScript, LESS, JADE, TwitterBootstrap, Mongoose.
-Just my personal project for learning, really.
+Starter project for Express, AngularJS, CoffeeScript, LESS, JADE, TwitterBootstrap, Mongoose.<br/>
+Just my personal project for learning, really.<br/>
+I am hoping to make be able to reuse most of script and code from this project for future projects!.<br/>
 
 ## How to Install
-Assuming you are already in the project directory.
+The following terminal commands assumes you are already in the project directory.<br/>
+<br/>
 Install Mongo database
 ```bash
 $ sudo apt-get install mongodb
@@ -26,7 +28,7 @@ $ coffee app.coffee
 ```
 or
 ```bash
-$ node app,js
+$ node app.js
 ```
 
 ## Scripts Explained
@@ -42,13 +44,13 @@ $ ./test.sh
 ```
 
 ### MongoDb scripts
-The script uses node-config package to read the configs based env.
-By default, the script will read default.coffee for properties.
-
-Please refer to https://github.com/lorenwest/node-config if you wish to set config for different envs.
-
-setupMongodb.coffee read config/default.coffee and creates the db with the given name @ given host.
-It will create the user with the given password.
+The script uses node-config package to read the configs based env.<br/>
+By default, the script will read default.coffee for properties.<br/>
+<br/>
+Please refer to https://github.com/lorenwest/node-config if you wish to set config for different envs.<br/>
+<br/>
+setupMongodb.coffee read config/default.coffee and creates the db with the given name @ given host.<br/>
+It will create the user with the given password.<br/>
 After that, it will create and load collections defined in the config from data/ directory.
 
 ```bash
@@ -65,7 +67,7 @@ Clean up useless files and compile .coffee -> .js, .less -> .css, .jade -> .html
 ```bash
 $ make
 ```
-Compile for production
+Compile for production ( does not work yet )
 ```bash
 $ make production
 ```
