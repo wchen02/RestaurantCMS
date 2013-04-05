@@ -18,13 +18,14 @@ window.GalleryCtrl = ($scope, $routeParams, Picture) ->
     $(document).ready ->
       setTimeout( (->
         Holder.run()
+        $('#gallery').slideDown()
         $(".thumbnail a img").fancybox(
           beforeShow: () ->
             target = $(@element[0])
             return
 
           afterClose: () ->
-            $(target).show()
+            target.slideDown()
             return
         )
 

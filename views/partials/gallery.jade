@@ -1,6 +1,6 @@
 .container
     h2 Gallery
-    .gallery.thumbnails
+    #gallery.thumbnails.hide
         .row-fluid(ng-repeat="row in pictureRows")
             .span3.thumbnail(ng-repeat="pic in row")
                 a(href="#")
