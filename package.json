@@ -18,7 +18,7 @@
   "scripts": {
     "start": "./node_modules/.bin/coffee app.coffee",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "scripts/make"
+    "postinstall": "cd ./scripts;make"
   },
   "repository": {
     "type": "git",
