@@ -1,7 +1,7 @@
 # Restaurant CMS
 Starter project for Express, AngularJS, CoffeeScript, LESS, JADE, TwitterBootstrap, Mongoose.<br/>
 Just my personal project for learning, really.<br/>
-I am hoping to make be able to reuse most of script and code from this project for future projects!.<br/>
+I am hoping to be able to reuse most of scripts and code from this project for future projects!.<br/>
 
 ## How to Install
 The following terminal commands assumes you are already in the project directory.<br/>
