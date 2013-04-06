@@ -1,4 +1,4 @@
 mongoose = require 'mongoose'
-PicturesSchema = require('./picturesSchema').Schema
+Schema = require './picturesSchema'
 
-exports.Model = mongoose.model 'Pictures', PicturesSchema
+module.exports = mongoose.model 'Pictures', Schema

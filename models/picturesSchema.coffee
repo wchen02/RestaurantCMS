@@ -1,6 +1,6 @@
 mongoose = require 'mongoose'
 
-PicturesSchema = mongoose.Schema
+Schema = mongoose.Schema
   _id:
     type: mongoose.Schema.Types.ObjectId
     select: false
@@ -13,4 +13,4 @@ PicturesSchema = mongoose.Schema
   description:
     type: String
 
-exports.Schema = PicturesSchema
+module.exports = Schema

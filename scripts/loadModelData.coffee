@@ -13,14 +13,10 @@ try
   Model = {}
   modelName = process.argv[2]
   dataFilename = (process.argv[3]) ? "./data/#{modelName}"
-  console.log(dataFilename)
-  test = (message) ->
-    console.log(message)
-    return
 
   loadModel = (exists) ->
     console.log("Loading model...")
-    Model = (require modelFilename).Model
+    Model = require modelFilename
 
     fs.exists dataFilename, loadData
     return

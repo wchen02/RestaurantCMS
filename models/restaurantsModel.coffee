@@ -1,8 +1,8 @@
 mongoose = require 'mongoose'
-RestaurantsSchema = require('./restaurantsSchema').Schema
+Schema = require './restaurantsSchema'
 
-RestaurantsSchema.methods.getMenu = ->
+Schema.methods.getMenu = ->
   console.log 'Getting menu'
   @menu
 
-exports.Model = mongoose.model 'Restaurants', RestaurantsSchema
+module.exports = mongoose.model 'Restaurants', Schema
