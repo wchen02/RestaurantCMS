@@ -1,4 +1,4 @@
-window.GalleryCtrl = ($scope, $routeParams, Picture) ->
+window.GalleryCtrl = ($scope, $routeParams, Picture, $timeout) ->
   target = null
   Picture.query (pictures) ->
     totalPics = pictures.length
@@ -16,10 +16,9 @@ window.GalleryCtrl = ($scope, $routeParams, Picture) ->
     $scope.pictureRows = pictureRows
 
     $(document).ready ->
-      setTimeout( (->
+      $timeout( (->
         Holder.run()
-        $('#gallery').slideDown()
-        $(".thumbnail a img").fancybox(
+        $(".fancybox").fancybox(
           beforeShow: () ->
             target = $(@element[0])
             return
@@ -30,11 +29,11 @@ window.GalleryCtrl = ($scope, $routeParams, Picture) ->
         )
 
         return
-      ), 500)
+      ), 0)
       return
     return
   return
 
 
 # Dependency Injection
-`//GalleryCtrl.$inject = ['$scope', '$routeParams', 'Picture']`
+`//GalleryCtrl.$inject = ['$scope', '$routeParams', 'Picture', '$timeout']`

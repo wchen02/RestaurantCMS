@@ -4,5 +4,5 @@
         .row-fluid(ng-repeat="row in pictureRows")
             .span3.thumbnail(ng-repeat="pic in row")
                 a(href="#")
-                    img(src="{{pic.src}}", data-caption="{{pic.caption}}", data-description="{{pic.description}}")
+                    img.fancybox(src="{{pic.src}}", data-caption="{{pic.caption}}", data-description="{{pic.description}}")
             .span12

@@ -19,4 +19,5 @@ angular.module("restaurantCms", ['myServices']).config ["$locationProvider", "$r
       templateUrl: "partials/about"
       controller: AboutCtrl
     ).otherwise redirectTo: "/"
+    return
 ]
