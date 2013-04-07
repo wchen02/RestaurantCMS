@@ -18,4 +18,8 @@ angular.module("myServices", ["ngResource"])
     query:
       method: "GET"
       isArray: true
+    save:
+      method: "POST"
+      isArray: false
+
 

@@ -10,6 +10,15 @@ Install Mongo database
 ```bash
 $ sudo apt-get install mongodb
 ```
+Install Elastic Search and the head plugin for GUI
+```bash
+$ sudo apt-get install elasticsearch
+$ sudo elasticsearch/bin/plugin -install mobz/elasticsearch-head
+```
+Open up the browser and see Elastic Search GUI
+```bash
+$ open http://localhost:9200/_plugin/head/
+```
 Install all the dependencies
 ```bash
 npm install

@@ -11,4 +11,5 @@ exports.init = (app, options...) ->
   app.get '/api/menu', passport.authenticate('bearer', {session: false}), menu.get
   app.get '/api/picture', passport.authenticate('bearer', {session: false}), picture.get
   app.get '/api/review', passport.authenticate('bearer', {session: false}), review.get
+  app.post '/api/review', passport.authenticate('bearer', {session: false}), review.save
   app.all '*', home.index
