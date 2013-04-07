@@ -4,8 +4,9 @@ module.exports =
     password: 'password'
     host: 'localhost'
     port: 27017
-    dbname: 'testdb'
+    dbname: 'restaurant'
   collections: [
     "pictures"
     "restaurants"
+    "reviews"
   ]

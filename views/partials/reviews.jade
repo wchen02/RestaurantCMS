@@ -1,0 +1,14 @@
+.container
+    h2 Reviews
+    #reviews
+        .post(ng-repeat="row in reviews")
+            .row-fluid
+                .span2
+                    | {{row.user.username}} <br />
+                    | {{row.user.city}}, {{row.user.state}}
+                .span9.offset1
+                    .rating {{row.rating}}
+                    .date {{row.timestamp}}
+                    .message {{row.message}}
+            hr
+        include form/add_review_form

@@ -1,0 +1,19 @@
+form#add_review_form.text-center.form-inline(ng-submit="addReview()")
+    .row
+        .span3
+            input.span3(type="text", ng-model="username", placeholder="Username", required)
+            input.span2.mustleft(type="text", ng-model="city", placeholder="City", required)
+            select.pull-right.span1(ng-model="state", required)
+                option(selected="selected") NY
+                option NJ
+            select.span3.text-center(ng-model="rating", required)
+                option 5
+                option 4
+                option 3
+                option 2
+                option 1
+        .span9
+            textarea.message(rows="4", ng-model="message", placeholder="Type your review here", required)
+    br
+    button.btn.btn-primary.btn-large(type="submit", class="btn") Post
+                          

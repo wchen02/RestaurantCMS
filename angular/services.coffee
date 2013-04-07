@@ -13,4 +13,9 @@ angular.module("myServices", ["ngResource"])
     query:
       method: "GET"
       isArray: true
+.factory "Review", ($resource) ->
+  $resource "api/review?access_token=" + accessToken, {},
+    query:
+      method: "GET"
+      isArray: true
 

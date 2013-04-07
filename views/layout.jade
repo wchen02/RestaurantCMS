@@ -26,25 +26,27 @@ html(lang='en', ng-app='restaurantCms')
     body
         #header
             block header
-                include header.jade
+                include header
         #content(ng-view)
             block content
 
         #footer
             block footer
-                include footer.jade
+                include footer
 
         block footerscript
-            script(src='/js/lib/jquery.min.js')
-            script(src='/js/lib/angular.js')
-            script(src='/js/lib/angular-resource.js')
-            script(src='/js/lib/bootstrap.min.js')
-            script(src='/js/lib/fancybox/jquery.fancybox.pack.js?v=2.1.4')
+            .scripts
+                script(src='/js/lib/jquery.min.js')
+                script(src='/js/lib/angular.js')
+                script(src='/js/lib/angular-resource.js')
+                script(src='/js/lib/bootstrap.min.js')
+                script(src='/js/lib/fancybox/jquery.fancybox.pack.js?v=2.1.4')
 
-            script(src='/js/angular/app.js')
-            script(src='/js/angular/controllers.js')
-            script(src='/js/angular/menu.js')
-            script(src='/js/angular/locations.js')
-            script(src='/js/angular/gallery.js')
-            script(src='/js/angular/services.js')
+                script(src='/js/angular/app.js')
+                script(src='/js/angular/controllers.js')
+                script(src='/js/angular/menu.js')
+                script(src='/js/angular/locations.js')
+                script(src='/js/angular/gallery.js')
+                script(src='/js/angular/services.js')
+                script(src='/js/angular/reviews.js')
 

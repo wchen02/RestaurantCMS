@@ -12,6 +12,9 @@ angular.module("restaurantCms", ['myServices']).config ["$locationProvider", "$r
     ).when("/locations",
       templateUrl: "partials/locations"
       controller: LocationsCtrl
+    ).when("/reviews",
+      templateUrl: "partials/reviews"
+      controller: ReviewsCtrl
     ).when("/gallery",
       templateUrl: "partials/gallery"
       controller: GalleryCtrl
