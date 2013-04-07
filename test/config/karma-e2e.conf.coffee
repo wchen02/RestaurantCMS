@@ -1,4 +1,4 @@
-basePath = "../"
+basePath = "../../"
 files = [
   ANGULAR_SCENARIO
   ANGULAR_SCENARIO_ADAPTER
