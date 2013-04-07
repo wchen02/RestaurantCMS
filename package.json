@@ -9,12 +9,12 @@
     "jade": "~0.28.2",
     "less-middleware": "~0.1.9",
     "mongoose": "~3.6.0",
-    "bulk-loader": "0.0.4",
     "passport": "~0.1.16",
     "passport-http-bearer": "~0.2.1",
     "coffee-script": "~1.6.1",
     "karma": "~0.8.1",
-    "mongoosastic": "0.0.12"
+    "mongoosastic": "0.0.12",
+    "bulk-loader": "0.0.8"
   },
   "scripts": {
     "start": "./node_modules/.bin/coffee app.coffee",

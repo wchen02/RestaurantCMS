@@ -37,7 +37,7 @@ app.configure "development", ->
 # Bootstrapping the app
 
 # Files are loaded alphabetically
-bulkloader.load('./bootstrap/', /\.coffee$/, (err, file, filename) ->
+bulkloader.load('bootstrap', /\.coffee$/, (err, file, filename) ->
   if err
     console.log 'Error loading ' + filename
   else
@@ -47,7 +47,7 @@ bulkloader.load('./bootstrap/', /\.coffee$/, (err, file, filename) ->
 )
 
 # Load all models
-bulkloader.load('./models/', /Model\.coffee$/, (err, file, filename) ->
+bulkloader.load('models', /Model\.coffee$/, (err, file, filename) ->
   if err
     console.log 'Error loading ' + filename
   else
