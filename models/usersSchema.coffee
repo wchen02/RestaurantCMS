@@ -4,7 +4,8 @@ ObjectId = Schema.Types.ObjectId
 
 schema = new Schema
   _id: {type: ObjectId, select: false}
-  src: {type: String, required: true, index: true}
-  caption: String
+  username: {type: String, required: true}
+  city: {type: String, required: true}
+  state: {type: String, required: true}
 
 module.exports = schema
