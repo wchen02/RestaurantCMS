@@ -7,6 +7,8 @@ try
   console.log("Script start time: " + new Date)
   fs = require "fs"
   mongoose = require "mongoose"
+  process.env['NODE_ENV'] = 'script'
+  process.env['NODE_CONFIG_DIR'] = __dirname + '/../config'
   config = require 'config'
 
   Model = {}

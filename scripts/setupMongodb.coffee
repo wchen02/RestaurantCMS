@@ -8,6 +8,8 @@ usuage = "node loadModelData"
 
 try
   exec = (require 'child_process').exec
+  process.env['NODE_ENV'] = 'script'
+  process.env['NODE_CONFIG_DIR'] = __dirname + '/../config'
   config = require 'config'
 
   puts = (error, stdout, stderr) ->
