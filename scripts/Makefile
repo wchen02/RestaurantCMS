@@ -1,7 +1,7 @@
 # Executable files
-LESSC := ../node_modules/less-middleware/node_modules/.bin/lessc
-COFFEE := ../node_modules/.bin/coffee
-JADE := ../node_modules/.bin/jade
+LESSC := lessc
+COFFEE := coffee
+JADE := jade
 
 # Compress executable + expect output dir
 COMPRESS := uglifyjs -o
