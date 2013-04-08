@@ -1,7 +1,6 @@
-#!/usr/bin/env ../node_modules/.bin/coffee
+#!/usr/bin/env coffee
 
 usuage = "node loadModelData <modelName> [dataFilename]"
-# ./loadModelData.coffee <modelName> [dataFilename]
 # coffee loadModelData.coffee <modelName> [dataFilename]
 
 try

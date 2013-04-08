@@ -6,10 +6,10 @@ JADE := ../node_modules/.bin/jade
 # Compress executable + expect output dir
 COMPRESS := uglifyjs -o
 
-HTML_FILES = $(shell find .. -wholename '../views/*.html')
-JS_FILES = $(shell find .. -wholename '../*.js' ! -wholename '../public/*' ! -wholename '../node_modules/*' ! -wholename '../test/lib/angular/*')
-COMPRESSJS_FILES = $(shell find .. -wholename '../angularjs/*.js')
-LESS_FILES = $(shell find .. -wholename '../public/css/*.less')
+HTML_FILES = $(shell find .. ! -type d -wholename '../views/*.html')
+JS_FILES = $(shell find .. ! -type d -wholename '../*.js' ! -wholename '../public/*' ! -wholename '../node_modules/*' ! -wholename '../test/lib/angular/*')
+COMPRESSJS_FILES = $(shell find .. ! -type d -wholename '../angularjs/*.js')
+LESS_FILES = $(shell find .. ! -type d -wholename '../public/css/*.less')
 
 # Marco: gets files from LESS_FILES, replace .less with .css and run %.css: %.less target
 CSS_FILES := $(LESS_FILES:.less=.css)

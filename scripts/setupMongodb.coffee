@@ -1,10 +1,9 @@
-#!/usr/bin/env ../node_modules/.bin/coffee
+#!/usr/bin/env coffee
 
 # This is different from doing mongodump and import it
 # This script is created for ease of creation of mongodb with collections data and authentication
 
 usuage = "node loadModelData"
-# ./setupMongodb.coffee
 # coffee setupMongodb.coffee
 
 try

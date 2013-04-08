@@ -1,4 +1,4 @@
-#!/usr/bin/env node_modules/.bin/coffee
+#!/usr/bin/env coffee
 express = require 'express'
 http = require 'http'
 path = require 'path'
